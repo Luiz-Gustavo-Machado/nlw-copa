@@ -1,4 +1,6 @@
+import { Prisma } from '@prisma/client'
 import Fastify from 'fastify'
+import { PrismaClient } from '@prisma/client'
 
 async function bootstrap() {
     const fastify = Fastify({
