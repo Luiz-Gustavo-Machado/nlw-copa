@@ -1,4 +1,3 @@
-import { Prisma } from '@prisma/client'
 import Fastify from 'fastify'
 import { PrismaClient } from '@prisma/client'
 
