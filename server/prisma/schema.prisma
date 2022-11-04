@@ -22,7 +22,7 @@ model Pool {
   ownerId   String?
 
   participants Participant[]
-  owner        User?          @relation(fields: [ownerId], references: [id])
+  owner        User?         @relation(fields: [ownerId], references: [id])
 }
 
 model Participant {
@@ -41,13 +41,13 @@ model User {
   id        String   @id @default(cuid())
   name      String
   email     String   @unique
+  googleId  String?   @unique
   avatarUrl String?
   createdAt DateTime @default(now())
 
   participantingAt Participant[]
   ownPools         Pool[]
 }
-
 model Game {
   id   String   @id @default(cuid())
   date DateTime
