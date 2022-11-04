@@ -1,9 +1,11 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
-import { z } from 'zod';
-import ShortUniqueId from 'short-unique-id';
 
 import { poolRoutes } from './routes/pool';
+import { authRoutes } from './routes/auth';
+import { gameRoutes } from './routes/game';
+import { guessRoutes } from './routes/guess';
+import { userRoutes } from './routes/user';
 
 async function bootstrap() {
     const fastify = Fastify({
@@ -15,6 +17,10 @@ async function bootstrap() {
     })
 
     fastify.register(poolRoutes)
+    fastify.register(authRoutes)
+    fastify.register(gameRoutes)
+    fastify.register(guessRoutes)
+    fastify.register(userRoutes)
 
     await fastify.listen({ port: 3333 /*, host: '0.0.0.0'*/ });
 }
