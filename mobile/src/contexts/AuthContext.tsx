@@ -46,6 +46,10 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
     }
   }
 
+  async function singInWithGoogle(access_token: string) {
+   console.log('TOKEN DE AUTENTICAÇÃO ===>', access_token)
+  }
+
   useEffect(() => {
     if(response?.type === 'success' && response.authentication?.accessToken) {
       singInWithGoogle(response.authentication.accessToken);
