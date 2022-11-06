@@ -22,13 +22,13 @@ async function bootstrap() {
         secret: 'nlwcopa',
     })
 
-    await fastify.register(poolRoutes)
     await fastify.register(authRoutes)
+    await fastify.register(poolRoutes)
+    await fastify.register(userRoutes)
     await fastify.register(gameRoutes)
     await fastify.register(guessRoutes)
-    await fastify.register(userRoutes)
 
-    await fastify.listen({ port: 3333 /*, host: '0.0.0.0'*/ });
+    await fastify.listen({ port: 3333, host: '0.0.0.0' });
 }
 
 bootstrap()
