@@ -37,16 +37,13 @@ export async function guessRoutes(fastify: FastifyInstance) {
 
     if (!participant) {
       return reply.status(400).send({
-        message: "You're not allowed to create a guess inside this pool."
+        message: "Você não tem permissão para criar um palpite dentro deste pool."
       })
     }
 
     const guess = await prisma.guess.findUnique({
       where: {
-        participantId_gameId: {
-          participantId: participant.id,
-          gameId,
-        }
+        
       }
     })
 
