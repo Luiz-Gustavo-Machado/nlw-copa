@@ -43,13 +43,17 @@ export async function guessRoutes(fastify: FastifyInstance) {
 
     const guess = await prisma.guess.findUnique({
       where: {
-        
+        participantId_gameId: {
+          participantId: participant.id,
+          gameId
+
+        }
       }
     })
 
     if (guess) {
       return reply.status(400).send({
-        message: "You already sent a guess to this game on this pool."
+        message: "Você já enviou um palpite para este jogo neste bolão."
       })
     }
 
@@ -61,13 +65,13 @@ export async function guessRoutes(fastify: FastifyInstance) {
 
     if (!game) {
       return reply.status(400).send({
-        message: "Game not found."
+        message: "Jogo não encontrado"
       })
     }
 
     if (game.date < new Date()) {
       return reply.status(400).send({
-        message: "You cannot send guesses after the game date."
+        message: "Você já enviou um palpite para este jogo neste bolão"
       })
     }
 
