@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -29,7 +28,7 @@ model Participant {
   poolId String
 
   guesses Guess[]
-  User    User    @relation(fields: [userId], references: [id])
+  user    User    @relation(fields: [userId], references: [id])
   pool    Pool    @relation(fields: [poolId], references: [id])
 
   @@unique([userId, poolId])
@@ -39,13 +38,14 @@ model User {
   id        String   @id @default(cuid())
   name      String
   email     String   @unique
-  googleId  String?   @unique
+  googleId  String?  @unique
   avatarUrl String?
   createdAt DateTime @default(now())
 
-  participantingAt Participant[]
-  ownPools         Pool[]
+  participatingAt Participant[]
+  ownPools        Pool[]
 }
+
 model Game {
   id   String   @id @default(cuid())
   date DateTime
@@ -70,4 +70,3 @@ model Guess {
 
   @@unique([participantId, gameId])
 }
-

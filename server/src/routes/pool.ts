@@ -126,13 +126,12 @@ export async function poolRoutes(fastify: FastifyInstance) {
         participants: {
           select: {
             id: true,
-          
-            User: {
-            select: {
-              avatarUrl: true,
+
+            user: {
+              select: {
+                avatarUrl: true,
+              }
             }
-          }
-          
           },
           take: 4,
         },
@@ -171,12 +170,11 @@ export async function poolRoutes(fastify: FastifyInstance) {
           select: {
             id: true,
 
-            User: {
-            select: {
-              avatarUrl: true
+            user: {
+              select: {
+                avatarUrl: true,
+              }
             }
-          }
-          
           },
           take: 4,
         },

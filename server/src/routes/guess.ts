@@ -37,7 +37,7 @@ export async function guessRoutes(fastify: FastifyInstance) {
 
     if (!participant) {
       return reply.status(400).send({
-        message: "Você não tem permissão para criar um palpite dentro deste pool."
+        message: "You're not allowed to create a guess inside this pool."
       })
     }
 
@@ -45,15 +45,14 @@ export async function guessRoutes(fastify: FastifyInstance) {
       where: {
         participantId_gameId: {
           participantId: participant.id,
-          gameId
-
+          gameId,
         }
       }
     })
 
     if (guess) {
       return reply.status(400).send({
-        message: "Você já enviou um palpite para este jogo neste bolão."
+        message: "You already sent a guess to this game on this pool."
       })
     }
 
@@ -65,13 +64,13 @@ export async function guessRoutes(fastify: FastifyInstance) {
 
     if (!game) {
       return reply.status(400).send({
-        message: "Jogo não encontrado"
+        message: "Game not found."
       })
     }
 
     if (game.date < new Date()) {
       return reply.status(400).send({
-        message: "Você já enviou um palpite para este jogo neste bolão"
+        message: "You cannot send guesses after the game date."
       })
     }
 
