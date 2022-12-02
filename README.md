@@ -13,10 +13,11 @@
 
 <br>
 
-<p align="center">
-  ![image](https://user-images.githubusercontent.com/108701750/205401757-87b8e2fd-b200-4021-a447-3121772689c4.png)
+<p display ="flex" justify-self ="center" >
+
+![image](https://user-images.githubusercontent.com/108701750/205403411-143c2088-5726-40d9-96ab-86e2d3eec4a2.png) 
+![image](https://user-images.githubusercontent.com/108701750/205401792-64e9c6e8-00ec-49a5-be7b-181f8cacb975.png)
   
-  ![image](https://user-images.githubusercontent.com/108701750/205401792-64e9c6e8-00ec-49a5-be7b-181f8cacb975.png)
 </p>
 
 ## 🚀 Tecnologias
