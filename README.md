@@ -16,8 +16,8 @@
 
 <div align="center">
   <a href="https://github.com/luizgmachado">
-  <img  height="310em" src="https://user-images.githubusercontent.com/108701750/205403411-143c2088-5726-40d9-96ab-86e2d3eec4a2.png"/>
-  <img  height="310em"  src="https://user-images.githubusercontent.com/108701750/205401792-64e9c6e8-00ec-49a5-be7b-181f8cacb975.png"/>
+  <img  height="300em" src="https://user-images.githubusercontent.com/108701750/205403411-143c2088-5726-40d9-96ab-86e2d3eec4a2.png"/>
+  <img  height="300em"  src="https://user-images.githubusercontent.com/108701750/205401792-64e9c6e8-00ec-49a5-be7b-181f8cacb975.png"/>
 </div>
 
 ## 🚀 Tecnologias
